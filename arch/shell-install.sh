@@ -1,18 +1,45 @@
 #!/bin/bash
 
+print_colored_text() {
+  local step="$1"
+  local total_steps="$2"
+  local text="$3"
+
+  case $step in
+    1)
+      color="\e[31m"  # Red
+      ;;
+    2)
+      color="\e[32m"  # Green
+      ;;
+    3)
+      color="\e[34m"  # Blue
+      ;;
+    *)
+      color="\e[0m"   # Default color
+      ;;
+  esac
+
+  echo -e "$color[$step/$total_steps] $text\e[0m"
+}
+
+print_ok_text() {
+  echo -e "\e[32m[OK] $1\e[0m"
+}
+
 # install fish
-echo "[1/3] installing fish & more"
+print_colored_text 1 3 "installing fish & more"
 echo "> sudo pacman -S fish zoxide eza"
 sudo pacman -S fish zoxide
 
-# Ensure Fish shell is set as default shell
-echo "[2/3] settings fish as default shell..."
+# set fish as default shell
+print_colored_text 2 3 "setting fish as default shell..."
 echo "> chsh -s /usr/bin/fish"
 chsh -s /usr/bin/fish
 
-# copy config
-echo "[3/3] copying fish config into ~/.config/fish/config.fish"
-echo"> mkdir -p ~/.config/fish;cp path_to_your_config_file ~/.config/fish/config.fish"
-mkdir -p ~/.config/fish;cp ../resources/config.fish ~/.config/fish/config.fish
+# copy fish config
+print_colored_text 3 3 "copying fish config into ~/.config/fish/config.fish"
+echo "> mkdir -p ~/.config/fish; cp ../resources/config.fish ~/.config/fish/config.fish"
+mkdir -p ~/.config/fish; cp ../resources/config.fish ~/.config/fish/config.fish
 
-echo "[OK] Fish shell installed successfully."
+print_ok_text "Fish shell installed successfully."
