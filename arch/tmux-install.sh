@@ -16,4 +16,4 @@ exec_step 4 4 "installing tpm plugins..." "~/.tmux/plugins/tpm/bin/install_plugi
 
 
 
-script_ok "tmux install script finished"
+script_ok "tmux install script finished, you may need to run <PREFIX>I to ensure tpm plugins are installed"
