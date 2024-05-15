@@ -11,4 +11,6 @@ exec_step 2 3 "setting fish as default shell..." "chsh -s /usr/bin/fish"
 # copy fish config
 exec_step 3 3 "copying custom fish config..." "mkdir -p ~/.config/fish; cp ../resources/config.fish ~/.config/fish/config.fish"
 
+
+
 script_ok "shell install script finished"
