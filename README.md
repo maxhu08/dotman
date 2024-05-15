@@ -16,6 +16,11 @@ scripts require a package manager and different distros have different package
 managers. So far I have only implemented scripts for arch linux but I might make
 scripts for other distros that I try.
 
+I put resources like small configs for stuff like `fish` and `tmux` in the `resources/`
+directory so the script is stable instead of having it be cloned for some other repository.
+For stuff like `nvim` and `dwm`, the configs will still be cloned since their configs are
+much heavier than the configs for `fish` or `tmux`.
+
 ## extra-notes
 
 To get the scripts, use these commands
@@ -25,8 +30,8 @@ git clone https://github.com/maxhu08/dotman
 cd dotman
 ```
 
-Next, to use the script you want find the script you want and the give it execute
-permissions, then run it.
+Next, to use the script you want find the script you want and run it. You may need
+to give it execute permissions with chmod
 
 ```
 cd arch
