@@ -2,6 +2,13 @@
 
 a collection of scripts to install and manage my dotfiles and system configuation files easily
 
+## how it works
+
+This repo has a collection of scripts which run some commands to quickly setup
+stuff like `fish`, `tmux`, `nvim`, `xorg`, `dwm` and more. The scripts will just
+run some commands and will sometimes require manual user action for sudo permissions.
+You can see what the scripts are like in the showcase section of this readme.
+
 ## info
 
 I put the scripts that work on arch linux in the `arch` directory because some
