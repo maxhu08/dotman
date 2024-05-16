@@ -26,16 +26,18 @@ much heavier than the configs for `fish` or `tmux`.
 To get the scripts, use these commands
 
 ```
+sudo pacman -S git
 git clone https://github.com/maxhu08/dotman
 cd dotman
 ```
 
 Next, to use the script you want find the script you want and run it. You may need
-to give it execute permissions with chmod
+to give it execute permissions with `chmod +x script.sh`
+
+Running `shell-install.sh` for example:
 
 ```
 cd arch
-chmod +x shell-install.sh
 ./shell-install.sh
 ```
 
