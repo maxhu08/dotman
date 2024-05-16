@@ -6,7 +6,7 @@ source utils.sh
 exec_step 1 4 "creating cloned directory..." "mkdir -p ~/Dev/cloned"
 
 # clone dwm
-exec_step 2 4 "cloning mh's build of dwm..." "git clone https://github.com/maxhu08/dwm ~/Dev/cloned"
+exec_step 2 4 "cloning mh's build of dwm..." "git clone https://github.com/maxhu08/dwm ~/Dev/cloned/dwm"
 
 # building dwm
 exec_step 3 4 "compiling dwm..." "cd ~/Dev/cloned/dwm;sudo make clean install"
