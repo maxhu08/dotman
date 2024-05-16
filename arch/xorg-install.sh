@@ -2,6 +2,8 @@
 
 source utils.sh
 
+script_start "xorg-install script"
+
 # install xorg & more
 exec_step 1 4 "installing Xorg & more..." "sudo pacman -S xorg-server xorg-xinit xf86-input-libinput"
 

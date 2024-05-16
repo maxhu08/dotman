@@ -2,6 +2,8 @@
 
 source utils.sh
 
+script_start "tmux-install script"
+
 # install tmux
 exec_step 1 4 "installing tmux..." "sudo pacman -S tmux"
 

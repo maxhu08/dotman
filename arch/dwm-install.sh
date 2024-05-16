@@ -2,6 +2,8 @@
 
 source utils.sh
 
+script_start "dwm-install script"
+
 # make sure there is ~/Dev/cloned
 exec_step 1 5 "creating cloned directory..." "mkdir -p ~/Dev/cloned"
 
