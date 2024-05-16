@@ -15,7 +15,7 @@ exec_step 3 5 "installing required packages" "sudo pacman -S libxft libxinerama"
 exec_step 4 5 "compiling dwm..." "cd ~/Dev/cloned/dwm;sudo make clean install"
 
 # add to ~/.5initrc
-exec_step 5 5 "adding dwm to ~/.xinitrc..." "echo "exec dwm" > "$HOME/.xinitrc""
+exec_step 5 5 "adding dwm to ~/.xinitrc..." "echo 'exec dwm' > '$HOME/.xinitrc'"
 
 
 
