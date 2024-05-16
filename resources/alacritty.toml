@@ -1,0 +1,33 @@
+background_opacity = 1
+
+[font.normal]
+  family = "Jetbrains Mono NerdFont"
+  size = 12.0
+
+[window.padding]
+  x = 4
+  y = 4
+
+[colors.primary]
+  background = "#171717"
+  foreground = "#a9b1d6"
+
+[colors.bright]
+  black = "#585b70"
+  blue = "#89b4fa"
+  cyan = "#7dcfff"
+  green = "#a6e3a1"
+  magenta = "#f5c2e7"
+  red = "#f38ba8"
+  white = "#c0caf5"
+  yellow = "#f9e2af"
+
+[colors.normal]
+  black = "#45475a"
+  blue = "#649cf8"
+  cyan = "#57c1ff"
+  green = "#8ada83"
+  magenta = "#ef9cd8"
+  red = "#ef688e"
+  white = "#a9b1d6"
+  yellow = "#f6d488"
