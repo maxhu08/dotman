@@ -11,7 +11,7 @@ exec_step 1 5 "creating cloned directory..." "mkdir -p ~/Dev/cloned"
 exec_step 2 5 "cloning mh's build of dwm..." "git clone https://github.com/maxhu08/dwm ~/Dev/cloned/dwm"
 
 # install needed packages
-exec_step 3 5 "installing required packages" "sudo pacman -S libxft libxinerama ttf-jetbrains-mono ttf-jetbrains-mono-nerd dmenu"
+exec_step 3 5 "installing required packages" "sudo pacman -S --noconfirm libxft libxinerama ttf-jetbrains-mono ttf-jetbrains-mono-nerd dmenu"
 
 # building d5m
 exec_step 4 5 "compiling dwm..." "cd ~/Dev/cloned/dwm;sudo make clean install"

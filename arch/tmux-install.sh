@@ -5,7 +5,7 @@ source utils/utils.sh
 script_start "tmux-install script"
 
 # install tmux
-exec_step 1 4 "installing tmux..." "sudo pacman -S tmux"
+exec_step 1 4 "installing tmux..." "sudo pacman -S --noconfirm tmux"
 
 # installing tpm
 exec_step 2 4 "installing tmux plugin manager (tpm)..." "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"
