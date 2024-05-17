@@ -2,10 +2,10 @@
 
 source utils/utils.sh
 
-script_start "font-install script"
+script_start "font-install script [REQUIRES PARU]"
 
 # install fonts
-exec_step 1 1 "installing fonts..." "sudo pacman -S noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-apple-emoji"
+exec_step 1 1 "installing fonts..." "paru -S noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-apple-emoji"
 
 
 
