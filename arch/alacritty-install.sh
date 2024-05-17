@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source utils.sh
+source utils/utils.sh
 
 script_start "alacritty-install script"
 
