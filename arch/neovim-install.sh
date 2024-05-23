@@ -2,7 +2,7 @@
 
 source utils/utils.sh
 
-script_start "neovim-install script"
+script_start "neovim install script"
 
 # install neovim
 exec_step 1 2 "installing neovim & more..." "sudo pacman -S --noconfirm neovim ripgrep unzip nodejs npm;curl -fsSL https://bun.sh/install | bash;bun i -g prettier biome eslint"

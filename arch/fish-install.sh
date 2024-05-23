@@ -2,7 +2,7 @@
 
 source utils/utils.sh
 
-script_start "shell-install script"
+script_start "shell install script"
 
 # install fish
 exec_step 1 3 "installing fish & more..." "sudo pacman -S --noconfirm fish zoxide eza"

@@ -2,7 +2,7 @@
 
 source utils/utils.sh
 
-script_start "paru-install script"
+script_start "paru install script"
 
 # install required packages
 exec_step 1 3 "installing required packages..." "sudo pacman -S --noconfirm base-devel rust"

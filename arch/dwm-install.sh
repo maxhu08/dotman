@@ -2,7 +2,7 @@
 
 source utils/utils.sh
 
-script_start "dwm-install script"
+script_start "dwm install script"
 
 # make sure there is ~/Dev/suckless
 exec_step 1 5 "creating suckless directory..." "mkdir -p ~/Dev/suckless"
