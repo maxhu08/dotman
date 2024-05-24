@@ -46,5 +46,5 @@ cd arch
 ![demo](./screenshots/demo.png)
 
 <!--
-find ~/Dev/dotman/ -type f -name "*.sh" -exec chmod +x {}
+find ~/Dev/dotman/ -type f -name "*.sh" -exec chmod +x {} \;
 -->
