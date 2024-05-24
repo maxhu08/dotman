@@ -5,16 +5,13 @@ source utils/utils.sh
 script_start "dwmblocks install script"
 
 # make sure there is ~/Dev/suckless
-exec_step 1 4 "creating suckless directory..." "mkdir -p ~/Dev/suckless"
+exec_step 1 3 "creating suckless directory..." "mkdir -p ~/Dev/suckless"
 
 # clone dwmblocks
-exec_step 2 4 "cloning mh's build of dwmblocks..." "git clone https://github.com/maxhu08/dwmblocks ~/Dev/suckless/dwmblocks"
+exec_step 2 3 "cloning mh's build of dwmblocks..." "git clone https://github.com/maxhu08/dwmblocks ~/Dev/suckless/dwmblocks"
 
 # building dwmblocks
-exec_step 3 4 "compiling dwm..." "cd ~/Dev/suckless/dwmblocks;sudo make clean install"
-
-# add to ~/.xinitrc
-exec_step 4 4 "adding dwm to ~/.xinitrc..." "echo 'exec dwm & exec dwmblocks' > '$HOME/.xinitrc'"
+exec_step 3 3 "compiling dwmblocks..." "cd ~/Dev/suckless/dwmblocks;sudo make clean install"
 
 
 

@@ -18,4 +18,4 @@ exec_step 4 4 "setting up ~/.Xauthority..." "touch ~/.Xauthority;chmod 600 ~/.Xa
 
 
 
-script_ok "xorg install script finished - EXPERIMENTAL"
+script_ok "xorg install script finished"

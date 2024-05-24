@@ -34,13 +34,17 @@ cd dotman
 Next, to use the script you want find the script you want and run it. You may need
 to give it execute permissions with `chmod +x script.sh`
 
-Running `shell-install.sh` for example:
+Running `fish-install.sh` for example:
 
 ```
 cd arch
-./shell-install.sh
+./fish-install.sh
 ```
 
 ## showcase
 
 ![demo](./screenshots/demo.png)
+
+<!--
+find ~/Dev/dotman/ -type f -name "*.sh" -exec chmod +x {}
+-->

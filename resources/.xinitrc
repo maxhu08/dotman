@@ -4,5 +4,5 @@
 xset -dpms
 
 exec dwm & \
-exec dwmblocks & \
+exec slstatus & \
 exec picom
