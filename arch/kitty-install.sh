@@ -2,14 +2,17 @@
 
 source utils/utils.sh
 
-script_start "kitty install script"
+N="kitty-install"
+S="2"
+
+script_start $N
 
 # install kitty
-exec_step 1 2 "installing kitty..." "sudo pacman -S --noconfirm kitty"
+exec_step $N 1 $S "installing kitty..." "sudo pacman -S --noconfirm kitty"
 
 # copy kitty.conf
-exec_step 2 2 "copying custom kitty.conf..." "mkdir -p ~/.config/kitty;cp ../resources/kitty.conf ~/.config/kitty/kitty.conf"
+exec_step $N 2 $S "copying custom kitty.conf..." "mkdir -p ~/.config/kitty;cp ../resources/kitty.conf ~/.config/kitty/kitty.conf"
 
 
 
-script_ok "kitty install script finished"
+script_ok $N

@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 exec_step() {
-  step=$1
-  total_steps=$2
-  text=$3
-  command_to_execute=$4
-
-  step_str="$step/$total_steps"
+  NAME=$1
+  STEP=$2
+  TOTAL_STEPS=$3
+  TEXT=$4
+  COMMAND_TO_EXECUTE=$5
   
   # colors
   black="\e[1;30m"
@@ -20,19 +19,16 @@ exec_step() {
   reset="\e[0m"
   
   # log info
-  formatted_text="${magenta}dotman ${blue}[${green}${step}${blue}/${green}${total_steps}${blue}] ${yellow}${text}${reset}"
-  echo -e "$formatted_text"
+  FORMATTED_TEXT="${magenta}dotman::${NAME} -> ${blue}[${green}${STEP}${blue}/${green}${TOTAL_STEPS}${blue}] ${yellow}${TEXT}${reset}"
+  echo -e "$FORMATTED_TEXT"
   
   # exec command
-  echo -e "${yellow}$ ${green}$command_to_execute${reset}\n"
-  eval "$command_to_execute"
+  echo -e "${yellow}$ ${green}$COMMAND_TO_EXECUTE${reset}\n"
+  eval "$COMMAND_TO_EXECUTE;echo -e ''"
 }
 
-# example
-# exec_step 1 5 "Running some command" "echo "test""
-
 script_start() {
-  message=$1
+  NAME=$1
   
   # colors
   black="\e[1;30m"
@@ -46,13 +42,13 @@ script_start() {
   reset="\e[0m"
   
   # log info
-  formatted_text="${magenta}dotman ${blue}[${green}START${blue}] ${yellow}${message}${reset}"
+  FORMATTED_TEXT="${magenta}dotman ${blue}[${green}START${blue}] ${yellow}${NAME}${reset}"
 
-  echo -e "$formatted_text\n"
+  echo -e "$FORMATTED_TEXT\n"
 }
 
 script_ok() {
-  message=$1
+  NAME=$1
   
   # colors
   black="\e[1;30m"
@@ -66,10 +62,7 @@ script_ok() {
   reset="\e[0m"
   
   # log info
-  formatted_text="${magenta}dotman ${blue}[${green}OK${blue}] ${yellow}${message}${reset}"
+  FORMATTED_TEXT="${magenta}dotman ${blue}[${green}OK${blue}] ${yellow}${NAME} finished${reset}"
 
-  echo -e "$formatted_text"
+  echo -e "$FORMATTED_TEXT"
 }
-
-# example
-# script_ok "script is done"

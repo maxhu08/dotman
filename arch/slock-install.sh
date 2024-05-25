@@ -2,17 +2,20 @@
 
 source utils/utils.sh
 
-script_start "slock install script"
+N="slock-install"
+S="3"
+
+script_start $N
 
 # make sure there is ~/Dev/suckless
-exec_step 1 3 "creating suckless directory..." "mkdir -p ~/Dev/suckless"
+exec_step $N 1 $S "creating suckless directory..." "mkdir -p ~/Dev/suckless"
 
 # clone slock
-exec_step 2 3 "cloning mh's build of slock..." "git clone https://github.com/maxhu08/slock ~/Dev/suckless/slock"
+exec_step $N 2 $S "cloning mh's build of slock..." "git clone https://github.com/maxhu08/slock ~/Dev/suckless/slock"
 
 # building slock
-exec_step 3 3 "compiling slock..." "cd ~/Dev/suckless/slock;sudo make clean install"
+exec_step $N 3 $S "compiling slock..." "cd ~/Dev/suckless/slock;sudo make clean install"
 
 
 
-script_ok "slock install script finished"
+script_ok $N

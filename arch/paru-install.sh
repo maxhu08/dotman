@@ -2,17 +2,20 @@
 
 source utils/utils.sh
 
-script_start "paru install script"
+N="paru-install"
+S="3"
+
+script_start $N
 
 # install required packages
-exec_step 1 3 "installing required packages..." "sudo pacman -S --noconfirm base-devel rust"
+exec_step $N 1 $S "installing required packages..." "sudo pacman -S --noconfirm base-devel rust"
 
 # cloning paru
-exec_step 2 3 "cloning paru..." "mkdir -p ~/Dev/cloned/paru;git clone https://aur.archlinux.org/paru ~/Dev/cloned/paru"
+exec_step $N 2 $S "cloning paru..." "mkdir -p ~/Dev/cloned/paru;git clone https://aur.archlinux.org/paru ~/Dev/cloned/paru"
 
 # building & installing paru
-exec_step 3 3 "building & installing paru..." "cd ~/Dev/cloned/paru;makepkg -si"
+exec_step $N 3 $S "building & installing paru..." "cd ~/Dev/cloned/paru;makepkg -si"
 
 
 
-script_ok "paru install script finished"
+script_ok $N
