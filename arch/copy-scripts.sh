@@ -11,7 +11,7 @@ script_start $N
 exec_step $N 1 $S "making scripts directory..." "mkdir -p ~/Dev/scripts"
 
 # copying scripts
-exec_step $N 2 $S "copying scripts..." "cp ../resources/scripts/ ~/Dev/scripts/"
+exec_step $N 2 $S "copying scripts..." "cp ../resources/scripts/* ~/Dev/scripts/"
 
 
 
